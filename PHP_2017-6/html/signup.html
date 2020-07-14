@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>注册线上模式账户</title>
+    <link type="text/css" href="_static/css/signup.css" rel="stylesheet"/>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<center>
+    <div class="aa">
+        <div class="aaa">
+            <!--这是标题上方的nebula徽标-->
+            <img src="img/Nebula_new_icon_green.png" width="110" height="55" style=""/>
+            <!--设定一个div盛放标题。-->
+            <div style="height:27px; width:370px;">
+                <div style="height:27px; width:360px; float:left;"><p
+                        style="padding:0px; margin:0px;color:rgba(0,0,0,0.8);font-size: 24px;">注册线上通行证</p></div>
+                <div style="height:27px; width:10px; background-color:#F96; float:left;"></div>
+            </div>
+
+
+            <!--表单开始-->
+            <form action="common/check_signup.php" method="post">
+                <div style=" padding-top:30px; padding-bottom:30px">
+
+                    用 户 ID：
+                    <p style="font-size:11px ; padding:0px; margin:0px"><strong>请使用8位阿拉伯数字，不可重复。</strong><br/></p>
+
+                    <input placeholder="请使用8位阿拉伯数字" type="text" name="user_id" style="width:330px; height:30px; margin-top: 10px;margin-bottom: 10px; margin-left:auto; margin-right:auto; border-color: #060; border-style: solid; border-top-width: 0px; border-right-width: 0px;
+border-bottom-width: 1px; border-left-width: 0px;padding-left: 20px;padding-right: 20px;"/><br/>
+
+                    用 户 名：
+                    <p style="font-size:11px ; padding:0px; margin:0px"><strong>您在社区中使用的昵称，不可重复。</strong><br/></p>
+
+                    <input placeholder="您在NES社区中使用的昵称" type="text" name="user_name" style="width:330px; height:30px; margin-top: 10px;margin-bottom: 10px; margin-left:auto; margin-right:auto; border-color: #060; border-style: solid; border-top-width: 0px; border-right-width: 0px;
+border-bottom-width: 1px; border-left-width: 0px;padding-left: 20px;padding-right: 20px;"/><br/>
+
+                    用户密码：
+                    <p style="font-size:11px ; padding:0px; margin:0px"><strong>密码，建议不小于8位、不大于24位。</strong><br/></p>
+
+                    <input placeholder="建议不小于8位、不大于24位。" type="password" name="user_passwd" style="width:330px; height:30px; margin-top: 10px;margin-bottom: 10px; margin-left:auto; margin-right:auto; border-color: #060; border-style: solid; border-top-width: 0px; border-right-width: 0px;
+border-bottom-width: 1px; border-left-width: 0px;padding-left: 20px;padding-right: 20px;"/><br/>
+
+                    头像：
+                    <p style="font-size:11px ; padding:0px; margin:0px"><strong>您在社区中使用的用户头像。</strong><br/></p>
+
+                    <input placeholder="不可大于2M。" type="file" name="user_head" style="width:330px; height:30px; margin-top: 10px;margin-bottom: 10px; margin-left:auto; margin-right:auto; border-color: #060; border-style: solid; border-top-width: 0px; border-right-width: 0px;
+border-bottom-width: 1px; border-left-width: 0px;padding-left: 20px;padding-right: 20px;"/><br/>
+
+                </div>
+
+                <div style="clear:both; width:370px; margin-top:20px;">
+                    <div style="width:40%; float:left; padding-top:10px;"><a href="register.php?mode=signin"
+                                                                             style=" text-decoration:none; height:36px; margin-top:10px;">有账户？</a>
+                    </div>
+                    <div style="width:60%; float:left; text-align:right; margin-bottom:20px;">
+                        <input type="reset" value="重置"
+                               style="border-radius:2px; box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5); width:88px; height:36px; background-color:#E91E63; color:#FFF; border:0px; font-size: 1em"/>
+                        <input type="submit" value="提交"
+                               style="border-radius:2px; box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5); width:88px; height:36px; background-color:#4285f4; color:#FFF; border:0px; font-size: 1em"/>
+                    </div>
+                </div>
+            </form>
+            <!--表单结束-->
+        </div>
+    </div>
+</center>
+</body>
+</html>

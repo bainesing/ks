@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--动态获取页面标题-->
+    <title><?php echo pageTitle($_GET["pid"]);?></title>
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script src="_static/js/modernizr.min.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side" style="padding-bottom: 0px">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+                <!--侧栏标题-->
+                <a href="#" class="icon icon-home"> 班级学生论坛</a>
+                <div class="version">Forum for class J15018</div>
+                <!--百度搜索框-->
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="https://www.baidu.com/s" method="get" target="_blank">
+                        <input type="hidden" name="ie" value="UTF-8" />
+                        <input type="text" name="wd" placeholder=" 在 baidu.com 搜索内容..." />
+                    </form>
+                </div>
+                <!--退出登录-->
+                <p style="margin-top: 15px;margin-bottom: 0;">
+                    <?php echo exitForum("name");?>
+
+                    <script language="javaScript">
+                        now = new Date(),hour = now.getHours()
+                        if(hour < 6){document.write("，新的一天呢。")}
+                        else if (hour < 9){document.write("，早上好。")}
+                        else if (hour < 12){document.write("，上午好。")}
+                        else if (hour < 14){document.write("，中午好。")}
+                        else if (hour < 17){document.write("，下午好。")}
+                        else if (hour < 19){document.write("，傍晚好。")}
+                        else if (hour < 22){document.write("，晚上好。")}
+                        else {document.write("，夜深了。")}
+                        function show_confirm(){
+                            var r=confirm("您确定要退出登录吗？");
+                            if (r==true){
+                                window.location.href='register.php?mode=signout';
+                            }
+                        }
+                    </script>
+                    <a onclick="show_confirm()" title="退出登录" style="color: #FFFFFF;cursor: pointer;">退出登录 &raquo;</a>
+                </p>
+            </div>
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.php?pid=0">论坛主页</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="index.php?pid=1">查看学生信息</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="index.php?pid=2">新增学生信息</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="index.php?pid=3">查看留言板</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="index.php?pid=4">发布留言</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="index.php?pid=5">SCP基金会数据库（Beta）</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <!-- 手机版页面时的界面标题条-->
+        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="#">班级学生论坛</a>
+        </nav>
+
+        <div class="wy-nav-content">
+            <div class="rst-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <!-- 这里是面包屑导航-->
+                    <ul class="wy-breadcrumbs">
+                        <li><a href="#">班级学生论坛</a> &raquo;</li>
+                        <li><script>document.write(document.title);</script></li>
+                        <li class="wy-breadcrumbs-aside"></li>
+                    </ul>
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" >
+                    <div itemprop="articleBody">
+                        <div class="section" id="title">
+                            <!-- 这里是正文标题-->
+                            <h1>
+                                <script>document.write(document.title);</script>
+                                <a class="headerlink" href="#title" title="永久链接至标题">¶</a>
+                            </h1>
+
+                            <!-- 这里是正文部分,使用php动态输出。-->
+                            <?php echo pageContect($_GET["pid"]);?>
+
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <!-- 这里是一个按钮，需要用到的时候可以取消注释。-->
+                    <!--div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+                        <a href="introduction.html" class="btn btn-neutral float-right" title="下一页" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+                    </div-->
+                    <hr/>
+                    <p>Copyright &copy;2017 <a href="http://nebula-soft.com" target="_blank">Nebula Software Studio</a> AllRight Reserved.</p>
+                    <div role="contentinfo">
+                        <p></p>
+                    </div>
+
+                </footer>
+            </div>
+         </div>
+    </section>
+
+    </div>
+    <!--这段js用于控制手机版页面的抽屉打开和关闭-->
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+    <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+    </script>
+</body>
+</html>

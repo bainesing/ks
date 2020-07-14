@@ -1,0 +1,41 @@
+<form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+  <p>学&nbsp;&nbsp;&nbsp;&nbsp;号：
+    <input type="text" name="StdXH"></p>
+    
+    <p>姓&nbsp;&nbsp;&nbsp;&nbsp;名：
+    <input type="text" name="StdXM"></p>
+    
+  <p>性&nbsp;&nbsp;&nbsp;&nbsp;别：
+<input type="radio" name="StdXB" value="男" />男
+    <input type="radio" name="StdXB" value="女" />女
+    </p>
+    
+  <p>出生年月：<input type="text" name="StdCSRQ"></p>
+    
+    <p>班&nbsp;&nbsp;&nbsp;&nbsp;级：
+    <input type="text" name="StdBJ"></p>
+    
+  <p>专&nbsp;&nbsp;&nbsp;&nbsp;业：
+  <input type="text" name="StdZY"></p>
+    
+    <p>籍&nbsp;&nbsp;&nbsp;&nbsp;贯：
+<label for="StdJG"></label>
+      <select name="StdJG">
+        <option value="山东省">山东省</option>
+        <option value="浙江省">浙江省</option>
+        <option value="河南省">河南省</option>
+        <option value="北京市">北京市</option>
+        <option value="辣鸡">辣鸡</option>
+        <option value="日本">日本</option>
+      </select>
+    </p>
+    
+  <p>电&nbsp;&nbsp;&nbsp;&nbsp;话：
+  <input type="text" name="StdTEL"></p>
+    
+    
+  <input type="reset" value="重置"
+           style="border-radius:2px; box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5); width:88px; height:36px; background-color:#E91E63; color:#FFF; border:0px; font-size: 1em ; margin-right: 20px"/>
+    <input type="submit" value="提交"
+           style="border-radius:2px; box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5); width:88px; height:36px; background-color:#4285f4; color:#FFF; border:0px; font-size: 1em"/>
+</form>
